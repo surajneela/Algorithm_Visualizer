@@ -34,3 +34,21 @@
 - **Run BFS / DFS**: Start the visualization.
 - **Reset**: clear colors.
 - **Clear**: Delete the entire graph.
+
+## Project Structure
+
+```text
+Algorithm_Visualizer/
+├── src/
+│   └── main/
+│       └── java/
+│           └── com/
+│               └── graphwiz/
+│                   ├── GraphWiz.java       # Main entry point and UI frame
+│                   ├── GraphPanel.java     # Drawing canvas and mouse interaction logic
+│                   ├── Node.java           # Data model for Graph Nodes
+│                   └── Edge.java           # Data model for Graph Edges
+├── bin/                                    # Compiled Java bytecode (.class files)
+├── README.md                               # Project documentation
+└── .gitignore                              # Git configuration
+```
