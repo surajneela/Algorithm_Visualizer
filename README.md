@@ -1,30 +1,36 @@
-# Algorithm Visualizer
+# GraphWiz
 
-A Java Swing application to visualize BFS and DFS algorithms on a graph.
+**GraphWiz** is a simple and catchy Graph Algorithm Visualizer built with Java Swing. It allows you to draw graphs interactively and watch how BFS (Breadth-First Search) and DFS (Depth-First Search) algorithms traverse them.
 
 ## Features
-- Interactive Graph Creation:
-  - **Left Click**: Add a node.
-  - **Left Click two nodes**: Add an edge between them. (Click one to select, then click another to connect).
-  - **Right Click**: Deselect current node.
-- **BFS Visualization**: Breadth-First Search animation.
-- **DFS Visualization**: Depth-First Search animation.
-- **Reset**: Resets colors and visited status.
-- **Clear**: Clears the entire graph.
+- **Design Your Graph**:
+  - **Click** to create nodes.
+  - **Click two nodes** to connect them with an edge.
+  - **Undo** button to fix mistakes easily.
+- **Visualize Algorithms**: Watch BFS and DFS in action with color-coded steps.
+- **Live Path Logging**: See the traversal path (e.g., `0-1-4-3`) generated in real-time.
+- **Interactive Control**: Reset or Clear the board to start fresh.
 
 ## How to Run
 
 ### Prerequisites
-- Java JDK installed (Java 8+ recommended).
+- Java JDK installed (Java 8 or higher).
 
-### Compile
-Run the following command from the project root:
-```bash
-mkdir bin
-javac -d bin src/main/java/com/visualizer/*.java
-```
+### Compile and Run
+1. Open your terminal in the project folder.
+2. Compile the code:
+   ```bash
+   javac -d bin src/main/java/com/graphwiz/*.java
+   ```
+3. Run the application:
+   ```bash
+   java -cp bin com.graphwiz.GraphWiz
+   ```
 
-### Run
-```bash
-java -cp bin com.visualizer.AlgorithmVisualizer
-```
+## Controls
+- **Left Click**: Add Node / Select Node
+- **Right Click**: Deselect Node
+- **Undo**: Remove the last added node or edge.
+- **Run BFS / DFS**: Start the visualization.
+- **Reset**: clear colors.
+- **Clear**: Delete the entire graph.

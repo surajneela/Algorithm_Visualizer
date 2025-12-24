@@ -1,4 +1,4 @@
-package com.visualizer;
+package com.graphwiz;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.List;
 import java.util.Queue;
 
-public class AlgorithmVisualizer extends JFrame {
+public class GraphWiz extends JFrame {
     private GraphPanel graphPanel;
     private JButton bfsButton;
     private JButton dfsButton;
@@ -16,8 +16,8 @@ public class AlgorithmVisualizer extends JFrame {
     private JLabel statusLabel;
     private StringBuilder pathBuilder;
 
-    public AlgorithmVisualizer() {
-        setTitle("Algorithm Visualizer");
+    public GraphWiz() {
+        setTitle("GraphWiz - Algorithm Visualizer");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -169,11 +169,11 @@ public class AlgorithmVisualizer extends JFrame {
     }
 
     public static void main(String[] args) {
-        System.out.println("Starting Application...");
+        System.out.println("Starting GraphWiz...");
         SwingUtilities.invokeLater(() -> {
             try {
                 System.out.println("Initializing UI...");
-                new AlgorithmVisualizer().setVisible(true);
+                new GraphWiz().setVisible(true);
                 System.out.println("UI Visible");
             } catch (Exception e) {
                 e.printStackTrace();

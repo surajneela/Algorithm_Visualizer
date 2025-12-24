@@ -1,4 +1,4 @@
-package com.visualizer;
+package com.graphwiz;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package com.visualizer;
+package com.graphwiz;
 
 import java.awt.Color;
 

@@ -1,4 +1,4 @@
-package com.visualizer;
+package com.graphwiz;
 
 public class Edge {
     private Node source;
