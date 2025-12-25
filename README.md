@@ -27,6 +27,17 @@
    java -cp bin com.graphwiz.GraphWiz
    ```
 
+### Run Python Version
+1. Ensure you have Python installed.
+2. Navigate to the Python directory:
+   ```bash
+   cd Python_Version
+   ```
+3. Run the script:
+   ```bash
+   python main.py
+   ```
+
 ## Controls
 - **Left Click**: Add Node / Select Node
 - **Right Click**: Deselect Node
@@ -48,6 +59,8 @@ Algorithm_Visualizer/
 │                   ├── GraphPanel.java     # Drawing canvas and mouse interaction logic
 │                   ├── Node.java           # Data model for Graph Nodes
 │                   └── Edge.java           # Data model for Graph Edges
+├── Python_Version/                         # Python implementation
+│   └── main.py                             # Main Python script
 ├── bin/                                    # Compiled Java bytecode (.class files)
 ├── README.md                               # Project documentation
 └── .gitignore                              # Git configuration
