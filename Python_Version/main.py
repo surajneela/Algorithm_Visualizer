@@ -7,17 +7,17 @@ import time
 
 # --- Configuration & Aesthetics ---
 THEME = {
-    "bg_color": "#1e1e1e",           # Dark background
-    "canvas_bg": "#252526",          # Slightly lighter canvas
-    "node_fill": "#ffffff",          # Default node color (Clean White)
-    "node_outline": "#333333",       # Node border
-    "edge_color": "#6e7681",         # Subtle grey edges
-    "text_color": "#252526",         # Text inside nodes
+    "bg_color": "#ffffff",           # White background
+    "canvas_bg": "#fafafa",          # Very light grey for canvas
+    "node_fill": "#ffffff",          # Node fill
+    "node_outline": "#000000",       # Solid black outline
+    "edge_color": "#333333",         # Dark grey/black edges
+    "text_color": "#000000",         # Black text
     "accent_color": "#007acc",       # VS Code blue for highlights
-    "visited_color": "#4ec9b0",      # Soft Teal for visited
-    "processing_color": "#ce9178",   # Soft Orange/Terra-cotta for processing
-    "finished_color": "#569cd6",     # Soft Blue for finished
-    "shadow_color": "#000000",       # Shadow for depth
+    "visited_color": "#98fb98",      # Pale Green
+    "processing_color": "#ffd700",   # Gold/Yellow
+    "finished_color": "#87cefa",     # Light Sky Blue
+    "shadow_color": "#dddddd",       # Light shadow
     "font_main": ("Segoe UI", 12, "bold"),
     "font_node": ("Segoe UI", 10, "bold")
 }
