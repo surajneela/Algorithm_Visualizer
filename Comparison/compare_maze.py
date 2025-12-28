@@ -1,3 +1,10 @@
+"""Compare pathfinding algorithms: Dijkstra vs A*.
+
+Creates a side-by-side race visualization to compare the
+exploration behavior and speed of Dijkstra and A* on the
+same randomly generated maze.
+"""
+
 import tkinter as tk
 import time
 import threading
@@ -23,6 +30,11 @@ COLOR_PATH_FINAL = "#ffff00"
 COLOR_BG = "#f0f0f0"
 
 class CompareApp:
+    """Application that runs a simultaneous comparison of two algorithms.
+
+    The app generates a shared maze and visualizes Dijkstra (left)
+    and A* (right) exploring the grid and tracing their final paths.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Race: Dijkstra vs A*")

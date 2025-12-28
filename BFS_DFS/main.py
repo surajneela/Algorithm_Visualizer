@@ -1,3 +1,9 @@
+"""Graph builder and BFS/DFS visualizer.
+
+This module provides an interactive canvas to create graphs
+and run breadth-first and depth-first searches for demonstration.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 import math
@@ -23,6 +29,7 @@ THEME = {
 }
 
 class Node:
+    """Represents a visual node in the graph canvas."""
     def __init__(self, node_id, x, y):
         self.id = str(node_id)
         self.x = x
@@ -33,11 +40,17 @@ class Node:
         self.radius = 24  # Slightly larger for better touch targets
 
 class Edge:
+    """Simple edge connecting two nodes."""
     def __init__(self, source, destination):
         self.source = source
         self.destination = destination
 
 class GraphWizApp:
+    """Main GUI class for the graph visualizer allowing node/edge creation
+
+    Supports interactive dragging, connecting nodes, and running
+    BFS/DFS animations.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("GraphWiz - Modern Visualizer")

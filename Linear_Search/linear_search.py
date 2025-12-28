@@ -1,3 +1,9 @@
+"""Linear search visualizer using Tkinter.
+
+This module provides a small GUI to demonstrate linear search
+by animating checks over an array of integers.
+"""
+
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import random
@@ -19,6 +25,11 @@ COLOR_BAR_NOT_FOUND = "#dc3545" # Red
 COLOR_TEXT = "#000000"
 
 class LinearSearchApp:
+    """Tkinter application that visualizes linear search.
+
+    The app supports custom arrays, random generation, and an
+    animated step-through of checking each element.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Linear Search Visualizer")

@@ -1,3 +1,9 @@
+"""A* algorithm visualizer for graphs using Tkinter.
+
+Allows creating weighted graphs and running A* to find shortest
+paths between a chosen start and target node.
+"""
+
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 import math
@@ -25,6 +31,7 @@ THEME = {
 }
 
 class Node:
+    """Graph node storing A* scores and parent pointer."""
     def __init__(self, node_id, x, y):
         self.id = str(node_id)
         self.x = x
@@ -36,12 +43,14 @@ class Node:
         self.radius = 24
 
 class Edge:
+    """Weighted edge between two nodes."""
     def __init__(self, source, destination, weight=1):
         self.source = source
         self.destination = destination
         self.weight = weight
 
 class AStarApp:
+    """GUI app to construct graphs and run the A* algorithm."""
     def __init__(self, root):
         self.root = root
         self.root.title("A* Algorithm Visualizer (Graph)")

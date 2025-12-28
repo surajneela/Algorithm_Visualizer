@@ -1,3 +1,9 @@
+"""Bubble sort visualizer with Tkinter.
+
+Interactive GUI to demonstrate bubble sort operations (compare, swap)
+on a small list of integers with animation controls.
+"""
+
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import random
@@ -18,6 +24,11 @@ COLOR_BAR_SORTED = "#28a745"    # Green
 COLOR_TEXT = "#000000"
 
 class BubbleSortApp:
+    """Application that animates the bubble sort algorithm.
+
+    Users can enter custom data or provide values via a dialog.
+    The UI highlights comparisons and swaps during sorting.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Bubble Sort Visualizer")

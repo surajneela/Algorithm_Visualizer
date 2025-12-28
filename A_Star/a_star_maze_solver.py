@@ -1,3 +1,9 @@
+"""A* algorithm maze solver visualizer.
+
+Demonstrates A* search on a grid using Manhattan heuristic and
+supports adjustable terrain weights (mud tiles).
+"""
+
 import tkinter as tk
 import random
 import threading
@@ -22,6 +28,12 @@ COLOR_PATH_FINAL = "#ffff00" # Yellow for the solution path
 COLOR_BG = "#f0f0f0"
 
 class AStarMazeApp:
+    """Tkinter application for generating mazes and visualizing A*.
+
+    The grid supports walls, normal path tiles, and higher-cost
+    'mud' tiles. The visualization shows visited nodes and the
+    final path when found.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("A* Maze Solver (Heuristic)")

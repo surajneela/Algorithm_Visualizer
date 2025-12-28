@@ -1,3 +1,9 @@
+"""Dijkstra algorithm visualizer for weighted graphs using Tkinter.
+
+Provides interactive graph building and a visualization of
+Dijkstra's algorithm on a user-created graph.
+"""
+
 import tkinter as tk
 from tkinter import ttk, simpledialog, messagebox
 import math
@@ -23,6 +29,13 @@ THEME = {
 }
 
 class Node:
+    """Graph node used by the visualizer.
+
+    Attributes:
+        id: String identifier for the node.
+        x, y: Position on the canvas.
+        distance: Used by Dijkstra to store the best-known distance.
+    """
     def __init__(self, node_id, x, y):
         self.id = str(node_id)
         self.x = x
@@ -33,12 +46,17 @@ class Node:
         self.radius = 24
 
 class Edge:
+    """Edge connecting two nodes with a weight."""
     def __init__(self, source, destination, weight=1):
         self.source = source
         self.destination = destination
         self.weight = weight
 
 class DijkstraApp:
+    """Main application class for the Dijkstra visualizer.
+
+    Manages the UI, the node/edge model, and the algorithm runner.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Dijkstra's Algorithm Visualizer")

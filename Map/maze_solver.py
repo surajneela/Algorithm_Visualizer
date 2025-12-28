@@ -1,3 +1,9 @@
+"""Maze generator and solver GUI.
+
+Provides a simple Tkinter-based maze generator (DFS backtracker)
+and visual BFS/DFS solvers for demonstration and teaching.
+"""
+
 import tkinter as tk
 import random
 import threading
@@ -21,6 +27,14 @@ COLOR_PATH_FINAL = "#ffff00" # Yellow for the solution path
 COLOR_BG = "#f0f0f0"
 
 class MazeApp:
+    """Main application class for maze generation and visualization.
+
+    Attributes:
+        root: The Tk root window.
+        grid: 2D grid representing walls (1) and paths (0).
+        start: Tuple for start cell coordinates (row, col).
+        end: Tuple for end cell coordinates (row, col).
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Maze Generator & Solver")

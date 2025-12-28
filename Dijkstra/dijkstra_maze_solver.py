@@ -1,3 +1,9 @@
+"""Dijkstra maze solver (weighted grid) visualizer.
+
+Displays a maze and visualizes Dijkstra's algorithm on a grid
+with optional higher-cost 'mud' tiles.
+"""
+
 import tkinter as tk
 import random
 import threading
@@ -22,6 +28,11 @@ COLOR_PATH_FINAL = "#ffff00" # Yellow for the solution path
 COLOR_BG = "#f0f0f0"
 
 class DijkstraMazeApp:
+    """Tkinter app that generates mazes and runs Dijkstra's algorithm.
+
+    Keeps a grid with cells that can be walls, normal path, or
+    higher-cost terrain and visualizes the search and result.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Dijkstra Maze Solver (Weighted)")

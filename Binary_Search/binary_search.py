@@ -1,3 +1,9 @@
+"""Binary search visualizer using Tkinter.
+
+Provides an interactive demonstration of binary search on a
+sorted list with visual highlighting of ranges and midpoints.
+"""
+
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import random
@@ -19,6 +25,11 @@ COLOR_BAR_DISCARDED = "#e0e0e0"    # Grey for discarded
 COLOR_TEXT = "#000000"
 
 class BinarySearchApp:
+    """Tkinter application that animates and explains binary search.
+
+    The app keeps a sorted list and visually discards halves while
+    searching for the target value.
+    """
     def __init__(self, root):
         self.root = root
         self.root.title("Binary Search Visualizer")
