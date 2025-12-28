@@ -56,7 +56,15 @@ class BinarySearchApp:
         btn_style = {"bg": "#333", "fg": "white", "font": ("Segoe UI", 10, "bold"), "relief": "flat", "padx": 15, "pady": 5}
 
         tk.Button(controls_frame, text="Search", command=self.start_search, **btn_style).pack(side=tk.LEFT, padx=10)
-        tk.Button(controls_frame, text="New Array", command=self.generate_data, **btn_style).pack(side=tk.LEFT, padx=10)
+        tk.Button(controls_frame, text="Generate Random", command=self.generate_data, **btn_style).pack(side=tk.LEFT, padx=10)
+
+        # Custom Data Section
+        custom_frame = tk.Frame(self.root, bg=COLOR_BG)
+        custom_frame.pack(pady=10)
+        tk.Label(custom_frame, text="Custom Data (comma separated):", bg=COLOR_BG, font=("Segoe UI", 10)).pack(side=tk.LEFT, padx=5)
+        self.custom_entry = tk.Entry(custom_frame, font=("Segoe UI", 10), width=30)
+        self.custom_entry.pack(side=tk.LEFT, padx=5)
+        tk.Button(custom_frame, text="Use Custom Data (Auto-Sorted)", command=self.use_custom_data, bg="#555", fg="white", relief="flat").pack(side=tk.LEFT, padx=5)
 
     def generate_data(self):
         if self.running: return
@@ -64,7 +72,29 @@ class BinarySearchApp:
         self.data.sort() # Critical for Binary Search
         self.discarded_indices = set()
         self.draw_bars(color_map={})
-        self.status_var.set("New Sorted Array Generated")
+        self.status_var.set("New Sorted Random Array Generated")
+
+    def use_custom_data(self):
+        if self.running: return
+        raw_data = self.custom_entry.get()
+        if not raw_data:
+            messagebox.showwarning("Warning", "Please enter some numbers.")
+            return
+        
+        try:
+            # Parse CSV
+            new_data = [int(x.strip()) for x in raw_data.split(',')]
+            if not new_data: raise ValueError
+            
+            # Auto-Sort for Binary Search
+            new_data.sort()
+            
+            self.data = new_data
+            self.discarded_indices = set()
+            self.draw_bars(color_map={})
+            self.status_var.set("Custom Data Loaded & Sorted")
+        except ValueError:
+            messagebox.showerror("Error", "Invalid format. Use comma-separated integers (e.g., 10, 20, 5).")
 
     def draw_bars(self, color_map):
         self.canvas.delete("all")
