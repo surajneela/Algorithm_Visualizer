@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, simpledialog
 import random
 import time
 import threading
@@ -31,7 +31,17 @@ class BinarySearchApp:
         self.discarded_indices = set()
 
         self._setup_ui()
-        self.generate_data()
+        # self.generate_data() # Removed default generation
+        self.root.after(100, self.prompt_startup_data)
+
+    def prompt_startup_data(self):
+        user_input = simpledialog.askstring("Input", "Enter numbers separated by commas (will be sorted automatically):", parent=self.root)
+        if user_input:
+            self.custom_entry.delete(0, tk.END)
+            self.custom_entry.insert(0, user_input)
+            self.use_custom_data()
+        else:
+            pass
 
     def _setup_ui(self):
         # Status
