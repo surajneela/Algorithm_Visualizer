@@ -42,7 +42,8 @@ class DijkstraMazeApp:
         self.header_frame = tk.Frame(self.root, bg=COLOR_BG, pady=10)
         self.header_frame.pack(side=tk.TOP, fill=tk.X)
         
-        tk.Label(self.header_frame, text="Dijkstra Maze (Mud Cost = 5)", bg=COLOR_BG, font=("Segoe UI", 12, "bold")).pack()
+        self.header_label = tk.Label(self.header_frame, text="Dijkstra Maze (Mud Cost = 5)", bg=COLOR_BG, font=("Segoe UI", 12, "bold"))
+        self.header_label.pack()
 
         # Controls
         self.controls_frame = tk.Frame(self.root, bg=COLOR_BG, pady=5)
@@ -179,6 +180,8 @@ class DijkstraMazeApp:
 
             if (r, c) == self.end:
                 self.highlight_path(path)
+                final_cost = costs[(r, c)]
+                self.header_label.config(text=f"Path Found! Total Cost: {final_cost}")
                 self.running = False
                 return
 
