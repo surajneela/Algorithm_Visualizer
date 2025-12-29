@@ -24,6 +24,8 @@ The following algorithms are available to explore:
 - **A\* Search**:
   - `a_star.py`: Pathfinding on a graph.
   - `a_star_maze_solver.py`: Optimized maze solving using heuristics.
+- **Map Maze Solver**:
+  - `maze_solver.py`: Generates random mazes and solves them using BFS or DFS.
 
 ### Comparisons
 
@@ -88,6 +90,12 @@ The following algorithms are available to explore:
     python A_Star/a_star.py
     # OR for the maze solver
     python A_Star/a_star_maze_solver.py
+    ```
+
+    **Map Maze Solver**
+
+    ```bash
+    python Map/maze_solver.py
     ```
 
     **Algorithm Comparison**
