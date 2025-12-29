@@ -84,8 +84,7 @@ class LinearSearchApp:
         # Custom Data Section
         custom_frame = tk.Frame(self.root, bg=COLOR_BG)
         custom_frame.pack(pady=10)
-        tk.Label(custom_frame, te
-                 xt="Custom Data (comma separated):", bg=COLOR_BG, font=("Segoe UI", 10)).pack(side=tk.LEFT, padx=5)
+        tk.Label(custom_frame, text="Custom Data (comma separated):", bg=COLOR_BG, font=("Segoe UI", 10)).pack(side=tk.LEFT, padx=5)
         self.custom_entry = tk.Entry(custom_frame, font=("Segoe UI", 10), width=30)
         self.custom_entry.pack(side=tk.LEFT, padx=5)
         tk.Button(custom_frame, text="Use Custom Data", command=self.use_custom_data, bg="#555", fg="white", relief="flat").pack(side=tk.LEFT, padx=5)
